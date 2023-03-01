@@ -1,7 +1,7 @@
-function relogio() {
+function timer() {
 
-    function criaHoraDosSegundos(segundos) {
-        const data = new Date(segundos * 1000);
+    function getHour(secs) {
+        const data = new Date(secs * 1000);
         return data.toLocaleTimeString('pt-BR', {
             timeZone: 'UTC'
         });
@@ -9,13 +9,13 @@ function relogio() {
 
     const relogio = document.querySelector('.relogio');
 
-    let segundos = 0
+    let second = 0
     let timer;
 
-    function iniciaRelogio() {
+    function startTimer() {
         timer = setInterval(function () {
-            segundos++
-            relogio.innerHTML = criaHoraDosSegundos(segundos);
+            second++
+            relogio.innerHTML = getHour(second);
         }, 1000)
     }
 
@@ -26,7 +26,7 @@ function relogio() {
         if (element.classList.contains('iniciar')) {
             relogio.classList.remove('pause');
             clearInterval(timer)
-            iniciaRelogio();
+            startTimer();
         };
 
         if (element.classList.contains('pausar')) {
@@ -38,12 +38,12 @@ function relogio() {
             relogio.classList.remove('pause');
             clearInterval(timer);
             relogio.innerHTML = '00:00:00';
-            segundos = 0;
+            second = 0;
         };
 
     });
 
 };
 
-relogio();
+timer();
 
