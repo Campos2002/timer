@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+body {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(27, 26, 26);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.relogio-container {
+    height: 15rem;
+    width: 15rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    border: 2px solid rgb(199, 120, 47);
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.relogio {
+    font-size: 3rem;
+}
+
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+button {
+    border: 2px solid green;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    position: relative;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    border-radius: 4em;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+}
+
+button:hover {
+    transition-duration: 0.1s;
+    height: 60px;
+    width: 60px;
+}
+
+button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px rgb(43, 122, 32);
+}
+
+button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.button:active {
+    top: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+.pause {
+    color: red;
+}
